@@ -20,7 +20,6 @@ export default async function handler(req, res) {
   const loginUrl = "https://workflow.iitm.ac.in/student/Authenticate.aspx";
   const gradesUrl = "https://workflow.iitm.ac.in/student/GradeInfo.aspx";
 
-
   function extractCookies(headers) {
     const raw = headers["set-cookie"] || [];
     return raw.map((c) => c.split(";")[0]).join("; ");
@@ -42,7 +41,6 @@ export default async function handler(req, res) {
 
     // captcha is just plain text in a <span> in the html (ig they didnt care too much)
     const captcha = $("#Spncaptcha").text().trim();
-
 
     if (!captcha) return res.status(500).json({ error: "Could not read captcha" });
 
@@ -102,7 +100,6 @@ export default async function handler(req, res) {
       maxRedirects: 5,
       validateStatus: () => true,
     });
-
 
     // Step 4: Parse grades
     const $g = cheerio.load(gradesRes.data);
