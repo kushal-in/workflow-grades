@@ -2,7 +2,6 @@
 
 Workflow (IITM's student portal) only works on Firefox and only on campus WiFi (or proxy). On mobile it's basically unusable (unless you are a sociopath and have firefox). This fixes that.
 
-Website: https://workflow-grades.vercel.app/
 
 ## what it does
 
